@@ -11,8 +11,8 @@
      e as tags canonical / og:url para o domínio definitivo.
      ============================================================ -->
 <title>Grupo UOMA — Food Solutions | Loja do Sorveteiro + Padoquinha | Macapá, Amapá</title>
-<meta name="description" content="Grupo UOMA: distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro (insumos para sorveteria, confeitaria e panificação) e Padoquinha (indústria de ultracongelados). Presentes na FIPAN 2026.">
-<meta name="keywords" content="Grupo UOMA, Loja do Sorveteiro, Padoquinha, FIPAN 2026, distribuidora Amapá, insumos sorveteria, confeitaria, panificação, ultracongelados, food service, Macapá, SUFRAMA, Área de Livre Comércio">
+<meta name="description" content="Grupo UOMA: distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro (insumos para sorveteria, confeitaria e panificação) e Padoquinha (indústria de ultracongelados). Presentes na feira internacional de Oiapoque.">
+<meta name="keywords" content="Grupo UOMA, Loja do Sorveteiro, Padoquinha, feira internacional Oiapoque, distribuidora Amapá, insumos sorveteria, confeitaria, panificação, ultracongelados, food service, Macapá, SUFRAMA, Área de Livre Comércio">
 <meta name="author" content="Grupo UOMA">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://grupouoma.pages.dev/">
@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Grupo UOMA">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Grupo UOMA — Food Solutions">
-<meta property="og:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. Encontre-nos na FIPAN 2026.">
+<meta property="og:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. Encontre-nos na feira internacional de Oiapoque.">
 <meta property="og:url" content="https://grupouoma.pages.dev/">
 <meta property="og:image" content="https://grupouoma.pages.dev/og.png">
 <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Grupo UOMA — Food Solutions">
-<meta name="twitter:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. FIPAN 2026.">
+<meta name="twitter:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. Feira internacional de Oiapoque.">
 <meta name="twitter:image" content="https://grupouoma.pages.dev/og.png">
 
 <!-- Cor da barra do navegador -->
@@ -663,6 +663,64 @@ a:focus-visible,button:focus-visible{
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   .revelar{opacity:1;transform:none}
 }
+
+/* Seletor de idioma (navbar) */
+.lang{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--linha);border-radius:100px;background:rgba(255,255,255,.55)}
+.lang button{border:0;background:transparent;font:inherit;font-size:12.5px;font-weight:650;letter-spacing:.03em;color:var(--texto-2);padding:5px 9px;border-radius:100px;cursor:pointer;line-height:1;transition:background .2s var(--ease),color .2s var(--ease);-webkit-text-fill-color:currentColor}
+.lang button:hover{color:var(--marinho)}
+.lang button[aria-pressed="true"]{background:var(--marinho);color:#fff;-webkit-text-fill-color:#fff}
+@media (max-width:820px){ .lang{margin-left:auto;margin-right:6px} }
+
+/* ============================================================
+   PAINEL ADMINISTRATIVO — privado, salvo só neste aparelho
+   ============================================================ */
+.adm{position:fixed;inset:0;z-index:120;background:rgba(15,35,68,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow:auto}
+.adm[hidden]{display:none}
+.adm__caixa{background:#fff;width:100%;max-width:660px;border-radius:20px;box-shadow:0 30px 80px rgba(15,35,68,.35);overflow:hidden;margin:24px 0}
+.adm__trava{padding:42px 28px;text-align:center}
+.adm__pin{width:170px;text-align:center;font-size:22px;letter-spacing:.28em;padding:12px;border:1px solid var(--linha);border-radius:12px;margin:10px 0;background:#fff;color:var(--texto)}
+.adm__erro{color:#b3261e;font-size:13px;min-height:18px;margin:2px 0 6px}
+.adm__trava-acoes{display:flex;gap:10px;justify-content:center}
+.adm__link{background:none;border:0;color:var(--texto-3);font-size:13px;text-decoration:underline;cursor:pointer;margin-top:16px}
+.adm__conteudo{padding:22px}
+.adm__conteudo[hidden]{display:none}
+.adm__topo{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}
+.adm__titulo{font-size:21px;font-weight:800;color:var(--marinho);margin:0}
+.adm__contador{color:var(--texto-2);font-size:12.5px;margin:4px 0 0}
+.adm__x{border:0;background:var(--nevoa);width:38px;height:38px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer;color:var(--texto-2);flex:none}
+.adm__form{background:var(--nevoa);border-radius:14px;padding:16px;margin-bottom:18px}
+.adm__campos{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:12px}
+.adm__campo{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:650;color:var(--texto-2)}
+.adm__campo--largo{grid-column:1/-1}
+.adm__campo input,.adm__campo select,.adm__campo textarea{font:inherit;font-weight:400;padding:10px 12px;border:1px solid var(--linha);border-radius:10px;background:#fff;color:var(--texto);width:100%}
+.adm__campo textarea{resize:vertical;min-height:52px}
+.adm__form .btn{width:100%}
+.adm__barra{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.adm__busca{flex:1;min-width:150px;padding:10px 12px;border:1px solid var(--linha);border-radius:10px;font:inherit;background:#fff;color:var(--texto)}
+.adm__barra-acoes{display:flex;gap:8px}
+.adm__barra-acoes .btn{padding:10px 14px;font-size:13px}
+.adm__lista{display:flex;flex-direction:column;gap:10px}
+.adm__vazio{color:var(--texto-3);text-align:center;padding:26px 0}
+.adm__item{border:1px solid var(--linha);border-radius:12px;padding:12px 14px}
+.adm__item-topo{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.adm__item-topo strong{color:var(--marinho);font-size:15px}
+.adm__del{border:0;background:none;font-size:20px;line-height:1;color:var(--texto-3);cursor:pointer;flex:none}
+.adm__item-meta{margin-top:6px;font-size:13px;color:var(--texto-2);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.adm__item-meta a{color:var(--marinho);font-weight:600}
+.adm__tag{background:rgba(199,162,71,.16);color:#7a5f16;padding:2px 9px;border-radius:100px;font-size:12px;font-weight:650}
+.adm__item-obs{margin-top:7px;font-size:13.5px;color:var(--texto);white-space:pre-wrap}
+.adm__item-data{margin-top:7px;font-size:11.5px;color:var(--texto-3)}
+@media (max-width:520px){ .adm__campos{grid-template-columns:1fr} }
+#adm-print-area{display:none}
+@media print{
+  body.imprimindo>*{display:none!important}
+  body.imprimindo #adm-print-area{display:block!important}
+  #adm-print-area h1{font-size:18px;margin:0 0 4px;color:#0F2344}
+  #adm-print-area p{font-size:12px;color:#444;margin:0 0 12px}
+  #adm-print-area table{width:100%;border-collapse:collapse;font-size:11px}
+  #adm-print-area th,#adm-print-area td{border:1px solid #999;padding:5px 6px;text-align:left;vertical-align:top}
+  #adm-print-area th{background:#eee}
+}
 </style>
 </head>
 
@@ -677,9 +735,15 @@ a:focus-visible,button:focus-visible{
     <a class="nav__marca" href="#topo" aria-label="Grupo UOMA — início">
       <img src="data:image/webp;base64,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" width="420" height="132" alt="Grupo UOMA">
     </a>
+    <div class="lang" role="group" aria-label="Idioma / Langue / Idioma">
+      <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
     <nav class="nav__links" aria-label="Seções do site">
       <a href="#quem-somos">Quem somos</a>
-      <a href="#fipan">FIPAN 2026</a>
+      <a href="#fipan">Parcerias</a>
       <a href="#empresas">Empresas</a>
       <a href="#contatos">Contatos</a>
       <a class="nav__cta" href="#contatos">Entrar em contato</a>
@@ -783,8 +847,8 @@ a:focus-visible,button:focus-visible{
 <section class="secao secao--nevoa" id="fipan">
   <div class="wrap">
     <div class="cabecalho-secao revelar">
-      <p class="rotulo">FIPAN 2026 &bull; São Paulo</p>
-      <h2 class="titulo">Estamos na FIPAN buscando parcerias.</h2>
+      <p class="rotulo">Feira Internacional &bull; Oiapoque</p>
+      <h2 class="titulo">Estamos na feira buscando parcerias.</h2>
       <p class="subtitulo">
         Viemos ouvir propostas. Se a sua empresa se encaixa em algum dos pontos abaixo,
         fale com a nossa diretoria ainda durante a feira.
@@ -1008,7 +1072,7 @@ a:focus-visible,button:focus-visible{
   <div class="wrap">
     <div class="proposta revelar">
       <h2>Tem uma proposta comercial?</h2>
-      <p>Envie catálogo, tabela de preços e condições para o nosso time de compras. Lemos tudo o que chega durante a FIPAN.</p>
+      <p>Envie catálogo, tabela de preços e condições para o nosso time de compras. Lemos tudo o que chega durante a feira.</p>
       <a class="btn" href="#form-proposta">
         Enviar proposta comercial
         <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1183,7 +1247,7 @@ a:focus-visible,button:focus-visible{
       <span>&copy; <span id="ano">2026</span> Grupo UOMA. Todos os direitos reservados.</span>
       <span class="rodape__fipan">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4 7h16M6 7v10M18 7v10"/></svg>
-        FIPAN 2026
+        Oiapoque
       </span>
     </div>
   </div>
@@ -1223,6 +1287,74 @@ a:focus-visible,button:focus-visible{
   </div>
 </div>
 
+
+<!-- ============================================================
+     PAINEL ADM — privado (abre em /#admin), dados só neste aparelho
+     ============================================================ -->
+<div id="painel-adm" class="adm" hidden aria-hidden="true">
+  <div class="adm__caixa">
+    <div id="adm-trava" class="adm__trava">
+      <h2 class="adm__titulo">Painel</h2>
+      <p class="adm__contador" id="adm-trava-dica">Digite seu PIN de acesso.</p>
+      <input id="adm-pin" class="adm__pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="PIN">
+      <p class="adm__erro" id="adm-pin-erro" role="alert"></p>
+      <div class="adm__trava-acoes">
+        <button class="btn btn--primario" id="adm-entrar" type="button">Entrar</button>
+        <button class="btn btn--fantasma" id="adm-fechar-trava" type="button">Fechar</button>
+      </div>
+      <button class="adm__link" id="adm-reset-pin" type="button">Esqueci meu PIN</button>
+    </div>
+
+    <div id="adm-conteudo" class="adm__conteudo" hidden>
+      <div class="adm__topo">
+        <div>
+          <h2 class="adm__titulo">Possíveis clientes</h2>
+          <p class="adm__contador"><span id="adm-total">0</span> cadastrados &bull; salvos só neste aparelho</p>
+        </div>
+        <button class="adm__x" id="adm-fechar" type="button" aria-label="Fechar">&times;</button>
+      </div>
+
+      <form id="adm-form" class="adm__form" novalidate>
+        <div class="adm__campos">
+          <label class="adm__campo">
+            <span>Empresa</span>
+            <input id="adm-empresa" type="text" maxlength="120" autocomplete="off" required>
+          </label>
+          <label class="adm__campo">
+            <span>Telefone</span>
+            <input id="adm-tel" type="tel" maxlength="40" inputmode="tel" autocomplete="off">
+          </label>
+          <label class="adm__campo">
+            <span>Interesse</span>
+            <select id="adm-int">
+              <option value="">—</option>
+              <option value="Grupo UOMA">Grupo UOMA (as duas)</option>
+              <option value="Loja do Sorveteiro">Loja do Sorveteiro</option>
+              <option value="Padoquinha">Padoquinha</option>
+            </select>
+          </label>
+          <label class="adm__campo adm__campo--largo">
+            <span>Observações</span>
+            <textarea id="adm-obs" maxlength="2000" rows="2" placeholder="Anote o que quiser: produto, volume, quando retornar…"></textarea>
+          </label>
+        </div>
+        <button class="btn btn--primario" id="adm-add" type="submit">Adicionar à lista</button>
+      </form>
+
+      <div class="adm__barra">
+        <input id="adm-busca" class="adm__busca" type="search" placeholder="Buscar empresa…" autocomplete="off">
+        <div class="adm__barra-acoes">
+          <button class="btn btn--fantasma" id="adm-csv" type="button">Baixar CSV</button>
+          <button class="btn btn--fantasma" id="adm-print" type="button">Imprimir / PDF</button>
+        </div>
+      </div>
+
+      <div id="adm-lista" class="adm__lista"></div>
+    </div>
+  </div>
+</div>
+<div id="adm-print-area"></div>
+
 <script>
 /* ============================================================
    CONFIGURAÇÃO
@@ -1243,8 +1375,8 @@ var SITE_URL = 'https://grupouoma.pages.dev/';
    preenchido, então a página funciona mesmo sem o banco.
    ------------------------------------------------------------ */
 var SUPABASE = {
-  url:   '',
-  chave: ''
+  url:   'https://tbbdxyogrlfvinediqjg.supabase.co',
+  chave: 'sb_publishable_IgahcMqYtvuSPpFQU-7mbA_w_BbSxYZ'
 };
 
 var CONTATO = {
@@ -1800,6 +1932,7 @@ function pintarQR(canvas, texto, tamanhoCss){
   function situacao(el, mensagem, tipo){
     el.textContent = mensagem;
     el.className = 'form-status' + (tipo ? ' ' + tipo : '');
+    if (window.__uomaI18n) window.__uomaI18n.applyEl(el);
   }
 
   /**
@@ -1860,13 +1993,13 @@ function pintarQR(canvas, texto, tamanhoCss){
       produtos:  texto(form, 'produtos') || null,
       condicoes: texto(form, 'condicoes') || null,
       exclusividade: form.elements['exclusividade'].checked,
-      origem: 'site-fipan-2026'
+      origem: 'site-feira-oiapoque'
     };
     if (!d.empresa || !d.contato) return 'Informe a empresa e o seu nome.';
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return 'Confira o e-mail digitado.';
     if (!d.categoria) return 'Escolha o que você oferece.';
     return d;
-  }, CONTATO.emailCompras, 'Proposta comercial — FIPAN 2026', {
+  }, CONTATO.emailCompras, 'Proposta comercial — Feira Oiapoque', {
     empresa:'Empresa', contato:'Contato', email:'E-mail', telefone:'Telefone',
     site:'Site', categoria:'Categoria', produtos:'Produtos', condicoes:'Condições'
   });
@@ -1880,16 +2013,223 @@ function pintarQR(canvas, texto, tamanhoCss){
       telefone:  texto(form, 'telefone') || null,
       interesse: texto(form, 'interesse') || null,
       mensagem:  texto(form, 'mensagem') || null,
-      origem: 'site-fipan-2026'
+      origem: 'site-feira-oiapoque'
     };
     if (!d.nome) return 'Informe o seu nome.';
     if (!d.email && !d.telefone) return 'Informe um e-mail ou um telefone.';
     if (d.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return 'Confira o e-mail digitado.';
     return d;
-  }, CONTATO.emailCompras, 'Contato — FIPAN 2026', {
+  }, CONTATO.emailCompras, 'Contato — Feira Oiapoque', {
     nome:'Nome', empresa:'Empresa', email:'E-mail', telefone:'Telefone',
     interesse:'Assunto', mensagem:'Mensagem'
   });
+
+  // ---- Cadastro da feira (fornecedor / cliente)
+  ligar('form-cadastro-campos', 'cad-status', 'cadastros_feira', function(form){
+    var d = {
+      nome:              texto(form, 'empresa'),
+      telefone:          texto(form, 'telefone') || null,
+      interesse_empresa: texto(form, 'interesse_empresa') || null,
+      origem: 'cadastro-feira'
+    };
+    if (!d.nome) return 'Informe o nome da empresa.';
+    if (!d.telefone) return 'Informe um telefone ou WhatsApp.';
+    return d;
+  }, CONTATO.emailCompras, 'Cadastro — Feira', {
+    nome:'Empresa', telefone:'Telefone', interesse_empresa:'Interesse'
+  });
+})();
+
+
+/* ============================================================
+   8b. IDIOMAS — PT / FR / ES  (tradução em tempo de execução)
+   ============================================================ */
+(function(){
+  var I18N = {"DICT": {"fr": {"Quem somos": "Qui sommes-nous", "Empresas": "Entreprises", "Contatos": "Contacts", "Entrar em contato": "Nous contacter", "Cadastro": "Inscription", "Distribuição • Indústria • Food Service": "Distribution • Industrie • Food Service", "Salvar contato": "Enregistrer le contact", "Role": "Défiler", "Três décadas abastecendo o food service do Amapá.": "Trois décennies à approvisionner le food service de l'Amapá.", "O Grupo UOMA reúne distribuição e indústria em uma operação integrada: da importação e do estoque local à produção de ultracongelados, com entrega em todo o estado.": "Le Grupo UOMA réunit distribution et industrie dans une opération intégrée : de l'importation et du stock local à la production de surgelés, avec livraison dans tout l'État.", "+ anos": "+ ans", "De mercado": "Sur le marché", "Relação construída com sorveterias, padarias, confeitarias e restaurantes da região.": "Relation bâtie avec les glaciers, boulangeries, pâtisseries et restaurants de la région.", "+ itens": "+ articles", "Portfólio ativo": "Portefeuille actif", "Insumos, equipamentos e embalagens para sorveteria, confeitaria e panificação.": "Ingrédients, équipements et emballages pour glacerie, pâtisserie et boulangerie.", "Indústria": "Industrie", "própria": "propre", "Fábrica de salgados e pães de queijo ultracongelados instalada em Macapá.": "Usine de salés et de pães de queijo surgelés installée à Macapá.", "municípios": "communes", "Distribuição em todo o Amapá": "Distribution dans tout l'Amapá", "Frota própria e equipe comercial interna e externa cobrindo o estado.": "Flotte propre et équipe commerciale interne et externe couvrant l'État.", "Área de Livre Comércio": "Zone de libre-échange", "Incentivos fiscais de Macapá e Santana aplicados à operação de compra e revenda.": "Avantages fiscaux de Macapá et Santana appliqués à l'achat et à la revente.", "+ colaboradores": "+ collaborateurs", "Time UOMA": "Équipe UOMA", "Equipe própria em comercial, logística, indústria e administrativo.": "Équipe propre au commercial, à la logistique, à l'industrie et à l'administratif.", "Viemos ouvir propostas. Se a sua empresa se encaixa em algum dos pontos abaixo, fale com a nossa diretoria ainda durante a feira.": "Nous sommes venus écouter des propositions. Si votre entreprise correspond à l'un des points ci-dessous, parlez à notre direction pendant le salon.", "Novas marcas": "Nouvelles marques", "Marcas que buscam entrada estruturada no mercado do Norte, com estoque e cobertura local.": "Marques cherchant une entrée structurée sur le marché du Nord, avec stock et couverture locale.", "Ingredientes": "Ingrédients", "Bases, coberturas, chocolates, gorduras, misturas e matérias-primas para indústria e revenda.": "Bases, nappages, chocolats, matières grasses, mélanges et matières premières pour l'industrie et la revente.", "Equipamentos": "Équipements", "Linha para sorveteria, panificação e food service, com assistência e reposição garantidas.": "Gamme pour glacerie, boulangerie et food service, avec assistance et pièces garanties.", "Embalagens": "Emballages", "Potes, filmes, laminados e embalagens para congelados, com personalização e escala.": "Pots, films, laminés et emballages pour surgelés, avec personnalisation et volume.", "Tecnologia": "Technologie", "Automação de depósito, rastreabilidade, força de vendas e integrações com ERP.": "Automatisation d'entrepôt, traçabilité, force de vente et intégrations ERP.", "Representações exclusivas": "Représentations exclusives", "Exclusividade para o Amapá com meta, plano comercial e execução acompanhada de perto.": "Exclusivité pour l'Amapá avec objectifs, plan commercial et exécution suivie de près.", "Duas operações, uma estrutura.": "Deux opérations, une seule structure.", "Distribuição": "Distribution", "Distribuidora especializada em insumos para sorveteria, confeitaria e panificação, com atendimento no varejo e no atacado.": "Distributeur spécialisé en ingrédients pour glacerie, pâtisserie et boulangerie, au détail comme en gros.", "Varejo": "Détail", "Atacado": "Gros", "Assistência": "Assistance", "Indústria de ultracongelados para food service — salgados e pães de queijo produzidos em Macapá, prontos para forno.": "Industrie de surgelés pour le food service — salés et pães de queijo produits à Macapá, prêts à enfourner.", "Ultracongelados": "Surgelés", "Marca própria": "Marque propre", "Fale com a gente agora.": "Parlez-nous maintenant.", "O time de compras responde durante a feira. Para tratar direto com a diretoria, o contato está no fim da página.": "L'équipe achats répond pendant le salon. Pour traiter directement avec la direction, le contact est en bas de page.", "WhatsApp — Compras": "WhatsApp — Achats", "Compras": "Achats", "Site — Loja do Sorveteiro": "Site — Loja do Sorveteiro", "Site — Padoquinha": "Site — Padoquinha", "Instagram — Loja": "Instagram — Boutique", "Prefere que a gente procure você?": "Vous préférez qu'on vous contacte ?", "Deixe seu contato e retornamos ainda durante a feira.": "Laissez vos coordonnées et nous vous répondrons pendant le salon.", "Nome": "Nom", "Empresa": "Entreprise", "Telefone ou WhatsApp": "Téléphone ou WhatsApp", "Assunto": "Sujet", "Selecione": "Sélectionnez", "Quero fornecer para o Grupo UOMA": "Je veux fournir le Grupo UOMA", "Quero comprar dos produtos de vocês": "Je veux acheter vos produits", "Represento uma marca": "Je représente une marque", "Parceria": "Partenariat", "Outro": "Autre", "Mensagem": "Message", "Enviar contato": "Envoyer", "Informe pelo menos um e-mail ou telefone.": "Indiquez au moins un e-mail ou un téléphone.", "Tem uma proposta comercial?": "Vous avez une proposition commerciale ?", "Envie catálogo, tabela de preços e condições para o nosso time de compras. Lemos tudo o que chega durante a feira.": "Envoyez catalogue, tarifs et conditions à notre équipe achats. Nous lisons tout ce qui arrive pendant le salon.", "Enviar proposta comercial": "Envoyer la proposition", "Conte o que você oferece": "Dites-nous ce que vous proposez", "Leva menos de um minuto. Chega direto para o time de compras, com cópia para a diretoria.": "Moins d'une minute. Cela arrive directement à l'équipe achats, avec copie à la direction.", "Seu nome": "Votre nom", "O que você oferece": "Ce que vous proposez", "Representação exclusiva": "Représentation exclusive", "Site ou catálogo": "Site ou catalogue", "Produtos ou linha": "Produits ou gamme", "Condições comerciais": "Conditions commerciales", "Tenho interesse em representação exclusiva para o Amapá": "Je suis intéressé par une représentation exclusive pour l'Amapá", "Enviar proposta": "Envoyer la proposition", "Usamos seus dados apenas para avaliar a proposta e responder.": "Nous utilisons vos données uniquement pour évaluer la proposition et répondre.", "Aponte a câmera para abrir esta página": "Pointez la caméra pour ouvrir cette page", "Baixar QR Code": "Télécharger le QR Code", "Cartão digital": "Carte de visite numérique", "Leve o Grupo UOMA no bolso.": "Emportez le Grupo UOMA dans votre poche.", "Salve nosso contato no celular ou compartilhe esta página com quem decide. Sem aplicativo, sem cadastro.": "Enregistrez notre contact sur votre téléphone ou partagez cette page avec les décideurs. Sans application, sans inscription.", "Salvar contato (.vcf)": "Enregistrer le contact (.vcf)", "Compartilhar página": "Partager la page", "Diretoria": "Direction", "Sócio-diretor • Grupo UOMA": "Directeur associé • Grupo UOMA", "WhatsApp direto": "WhatsApp direct", "E-mail da diretoria": "E-mail de la direction", "Food Solutions — distribuição, indústria e food service. Macapá • Amapá • Brasil.": "Food Solutions — distribution, industrie et food service. Macapá • Amapá • Brésil.", "Instagram da Loja": "Instagram de la boutique", "Instagram da Padoquinha": "Instagram de Padoquinha", "Contato": "Contact", "Grupo UOMA. Todos os direitos reservados.": "Grupo UOMA. Tous droits réservés.", "Meu contato": "Mon contact", "Sócio-diretor • Loja do Sorveteiro e Padoquinha": "Directeur associé • Loja do Sorveteiro et Padoquinha", "Salvar meu contato": "Enregistrer mon contact", "Peça para a pessoa apontar a câmera do celular para o código.": "Demandez à la personne de pointer la caméra du téléphone vers le code.", "Interesse em": "Intérêt pour", "Grupo UOMA (as duas empresas)": "Grupo UOMA (les deux entreprises)", "Loja do Sorveteiro (distribuição)": "Loja do Sorveteiro (distribution)", "Padoquinha (indústria)": "Padoquinha (industrie)", "Enviando…": "Envoi en cours…", "Abrindo seu aplicativo de e-mail…": "Ouverture de votre messagerie…", "Recebemos. Obrigado — vamos responder em breve.": "Bien reçu. Merci — nous répondrons bientôt.", "Muitos envios seguidos. Aguarde um minuto.": "Trop d'envois d'affilée. Attendez une minute.", "Não conseguimos enviar agora. Fale com a gente pelo WhatsApp.": "Envoi impossible pour le moment. Contactez-nous sur WhatsApp.", "Informe a empresa e o seu nome.": "Indiquez l'entreprise et votre nom.", "Confira o e-mail digitado.": "Vérifiez l'e-mail saisi.", "Escolha o que você oferece.": "Choisissez ce que vous proposez.", "Informe o seu nome.": "Indiquez votre nom.", "Informe um e-mail ou um telefone.": "Indiquez un e-mail ou un téléphone.", "Informe um telefone ou WhatsApp.": "Indiquez un téléphone ou WhatsApp.", "Parcerias": "Partenariats", "Feira Internacional • Oiapoque": "Salon international • Oiapoque", "Estamos na feira buscando parcerias.": "Nous sommes au salon à la recherche de partenariats.", "Cadastro rápido": "Enregistrement rapide", "Empresa, telefone e a empresa do grupo de interesse.": "Entreprise, téléphone et l'entreprise du groupe concernée.", "Nome da empresa": "Nom de l'entreprise", "Salvar cadastro": "Enregistrer", "Fica salvo direto na sua lista.": "Enregistré directement dans votre liste.", "Informe o nome da empresa.": "Indiquez le nom de l'entreprise."}, "es": {"Quem somos": "Quiénes somos", "Empresas": "Empresas", "Contatos": "Contactos", "Entrar em contato": "Contáctenos", "Cadastro": "Registro", "Distribuição • Indústria • Food Service": "Distribución • Industria • Food Service", "Salvar contato": "Guardar contacto", "Role": "Desliza", "Três décadas abastecendo o food service do Amapá.": "Tres décadas abasteciendo el food service de Amapá.", "O Grupo UOMA reúne distribuição e indústria em uma operação integrada: da importação e do estoque local à produção de ultracongelados, com entrega em todo o estado.": "El Grupo UOMA reúne distribución e industria en una operación integrada: de la importación y el stock local a la producción de ultracongelados, con entrega en todo el estado.", "+ anos": "+ años", "De mercado": "En el mercado", "Relação construída com sorveterias, padarias, confeitarias e restaurantes da região.": "Relación construida con heladerías, panaderías, pastelerías y restaurantes de la región.", "+ itens": "+ ítems", "Portfólio ativo": "Portafolio activo", "Insumos, equipamentos e embalagens para sorveteria, confeitaria e panificação.": "Insumos, equipos y envases para heladería, pastelería y panificación.", "Indústria": "Industria", "própria": "propia", "Fábrica de salgados e pães de queijo ultracongelados instalada em Macapá.": "Fábrica de salados y panes de queso ultracongelados instalada en Macapá.", "municípios": "municipios", "Distribuição em todo o Amapá": "Distribución en todo Amapá", "Frota própria e equipe comercial interna e externa cobrindo o estado.": "Flota propia y equipo comercial interno y externo cubriendo el estado.", "Área de Livre Comércio": "Zona de Libre Comercio", "Incentivos fiscais de Macapá e Santana aplicados à operação de compra e revenda.": "Incentivos fiscales de Macapá y Santana aplicados a la compra y reventa.", "+ colaboradores": "+ colaboradores", "Time UOMA": "Equipo UOMA", "Equipe própria em comercial, logística, indústria e administrativo.": "Equipo propio en comercial, logística, industria y administración.", "Viemos ouvir propostas. Se a sua empresa se encaixa em algum dos pontos abaixo, fale com a nossa diretoria ainda durante a feira.": "Vinimos a escuchar propuestas. Si su empresa encaja en alguno de los puntos abajo, hable con nuestra dirección durante la feria.", "Novas marcas": "Nuevas marcas", "Marcas que buscam entrada estruturada no mercado do Norte, com estoque e cobertura local.": "Marcas que buscan una entrada estructurada en el mercado del Norte, con stock y cobertura local.", "Ingredientes": "Ingredientes", "Bases, coberturas, chocolates, gorduras, misturas e matérias-primas para indústria e revenda.": "Bases, coberturas, chocolates, grasas, mezclas y materias primas para industria y reventa.", "Equipamentos": "Equipos", "Linha para sorveteria, panificação e food service, com assistência e reposição garantidas.": "Línea para heladería, panificación y food service, con asistencia y repuestos garantizados.", "Embalagens": "Envases", "Potes, filmes, laminados e embalagens para congelados, com personalização e escala.": "Envases, films, laminados y empaques para congelados, con personalización y escala.", "Tecnologia": "Tecnología", "Automação de depósito, rastreabilidade, força de vendas e integrações com ERP.": "Automatización de depósito, trazabilidad, fuerza de ventas e integraciones con ERP.", "Representações exclusivas": "Representaciones exclusivas", "Exclusividade para o Amapá com meta, plano comercial e execução acompanhada de perto.": "Exclusividad para Amapá con metas, plan comercial y ejecución acompañada de cerca.", "Duas operações, uma estrutura.": "Dos operaciones, una estructura.", "Distribuição": "Distribución", "Distribuidora especializada em insumos para sorveteria, confeitaria e panificação, com atendimento no varejo e no atacado.": "Distribuidora especializada en insumos para heladería, pastelería y panificación, con atención al menudeo y al mayoreo.", "Varejo": "Menudeo", "Atacado": "Mayoreo", "Assistência": "Asistencia", "Indústria de ultracongelados para food service — salgados e pães de queijo produzidos em Macapá, prontos para forno.": "Industria de ultracongelados para food service — salados y panes de queso producidos en Macapá, listos para horno.", "Ultracongelados": "Ultracongelados", "Marca própria": "Marca propia", "Fale com a gente agora.": "Hable con nosotros ahora.", "O time de compras responde durante a feira. Para tratar direto com a diretoria, o contato está no fim da página.": "El equipo de compras responde durante la feria. Para tratar directo con la dirección, el contacto está al final de la página.", "WhatsApp — Compras": "WhatsApp — Compras", "Compras": "Compras", "Site — Loja do Sorveteiro": "Sitio — Loja do Sorveteiro", "Site — Padoquinha": "Sitio — Padoquinha", "Instagram — Loja": "Instagram — Tienda", "Prefere que a gente procure você?": "¿Prefiere que le contactemos?", "Deixe seu contato e retornamos ainda durante a feira.": "Deje sus datos y le respondemos durante la feria.", "Nome": "Nombre", "Empresa": "Empresa", "Telefone ou WhatsApp": "Teléfono o WhatsApp", "Assunto": "Asunto", "Selecione": "Seleccione", "Quero fornecer para o Grupo UOMA": "Quiero proveer al Grupo UOMA", "Quero comprar dos produtos de vocês": "Quiero comprar sus productos", "Represento uma marca": "Represento una marca", "Parceria": "Alianza", "Outro": "Otro", "Mensagem": "Mensaje", "Enviar contato": "Enviar contacto", "Informe pelo menos um e-mail ou telefone.": "Indique al menos un correo o teléfono.", "Tem uma proposta comercial?": "¿Tiene una propuesta comercial?", "Envie catálogo, tabela de preços e condições para o nosso time de compras. Lemos tudo o que chega durante a feira.": "Envíe catálogo, lista de precios y condiciones a nuestro equipo de compras. Leemos todo lo que llega durante la feria.", "Enviar proposta comercial": "Enviar propuesta comercial", "Conte o que você oferece": "Cuéntenos qué ofrece", "Leva menos de um minuto. Chega direto para o time de compras, com cópia para a diretoria.": "Toma menos de un minuto. Llega directo al equipo de compras, con copia a la dirección.", "Seu nome": "Su nombre", "O que você oferece": "Qué ofrece", "Representação exclusiva": "Representación exclusiva", "Site ou catálogo": "Sitio o catálogo", "Produtos ou linha": "Productos o línea", "Condições comerciais": "Condiciones comerciales", "Tenho interesse em representação exclusiva para o Amapá": "Me interesa la representación exclusiva para Amapá", "Enviar proposta": "Enviar propuesta", "Usamos seus dados apenas para avaliar a proposta e responder.": "Usamos sus datos solo para evaluar la propuesta y responder.", "Aponte a câmera para abrir esta página": "Apunte la cámara para abrir esta página", "Baixar QR Code": "Descargar código QR", "Cartão digital": "Tarjeta digital", "Leve o Grupo UOMA no bolso.": "Lleve el Grupo UOMA en el bolsillo.", "Salve nosso contato no celular ou compartilhe esta página com quem decide. Sem aplicativo, sem cadastro.": "Guarde nuestro contacto en el celular o comparta esta página con quien decide. Sin aplicación, sin registro.", "Salvar contato (.vcf)": "Guardar contacto (.vcf)", "Compartilhar página": "Compartir página", "Diretoria": "Dirección", "Sócio-diretor • Grupo UOMA": "Socio-director • Grupo UOMA", "WhatsApp direto": "WhatsApp directo", "E-mail da diretoria": "Correo de la dirección", "Food Solutions — distribuição, indústria e food service. Macapá • Amapá • Brasil.": "Food Solutions — distribución, industria y food service. Macapá • Amapá • Brasil.", "Instagram da Loja": "Instagram de la tienda", "Instagram da Padoquinha": "Instagram de Padoquinha", "Contato": "Contacto", "Grupo UOMA. Todos os direitos reservados.": "Grupo UOMA. Todos los derechos reservados.", "Meu contato": "Mi contacto", "Sócio-diretor • Loja do Sorveteiro e Padoquinha": "Socio-director • Loja do Sorveteiro y Padoquinha", "Salvar meu contato": "Guardar mi contacto", "Peça para a pessoa apontar a câmera do celular para o código.": "Pida a la persona que apunte la cámara del celular hacia el código.", "Interesse em": "Interés en", "Grupo UOMA (as duas empresas)": "Grupo UOMA (ambas empresas)", "Loja do Sorveteiro (distribuição)": "Loja do Sorveteiro (distribución)", "Padoquinha (indústria)": "Padoquinha (industria)", "Enviando…": "Enviando…", "Abrindo seu aplicativo de e-mail…": "Abriendo su correo…", "Recebemos. Obrigado — vamos responder em breve.": "Recibido. Gracias — responderemos pronto.", "Muitos envios seguidos. Aguarde um minuto.": "Demasiados envíos seguidos. Espere un minuto.", "Não conseguimos enviar agora. Fale com a gente pelo WhatsApp.": "No pudimos enviar ahora. Escríbanos por WhatsApp.", "Informe a empresa e o seu nome.": "Indique la empresa y su nombre.", "Confira o e-mail digitado.": "Revise el correo ingresado.", "Escolha o que você oferece.": "Elija qué ofrece.", "Informe o seu nome.": "Indique su nombre.", "Informe um e-mail ou um telefone.": "Indique un correo o un teléfono.", "Informe um telefone ou WhatsApp.": "Indique un teléfono o WhatsApp.", "Parcerias": "Alianzas", "Feira Internacional • Oiapoque": "Feria internacional • Oiapoque", "Estamos na feira buscando parcerias.": "Estamos en la feria buscando alianzas.", "Cadastro rápido": "Registro rápido", "Empresa, telefone e a empresa do grupo de interesse.": "Empresa, teléfono y la empresa del grupo de interés.", "Nome da empresa": "Nombre de la empresa", "Salvar cadastro": "Guardar registro", "Fica salvo direto na sua lista.": "Se guarda directo en su lista.", "Informe o nome da empresa.": "Indique el nombre de la empresa."}, "en": {"Quem somos": "About us", "Empresas": "Companies", "Contatos": "Contacts", "Entrar em contato": "Get in touch", "Cadastro": "Register", "Distribuição • Indústria • Food Service": "Distribution • Industry • Food Service", "Salvar contato": "Save contact", "Role": "Scroll", "Três décadas abastecendo o food service do Amapá.": "Three decades supplying Amapá's food service.", "O Grupo UOMA reúne distribuição e indústria em uma operação integrada: da importação e do estoque local à produção de ultracongelados, com entrega em todo o estado.": "Grupo UOMA brings distribution and industry together in one integrated operation: from importing and local stock to producing frozen goods, with delivery across the state.", "+ anos": "+ years", "De mercado": "In business", "Relação construída com sorveterias, padarias, confeitarias e restaurantes da região.": "A relationship built with ice cream shops, bakeries, confectioneries and restaurants across the region.", "+ itens": "+ items", "Portfólio ativo": "Active portfolio", "Insumos, equipamentos e embalagens para sorveteria, confeitaria e panificação.": "Ingredients, equipment and packaging for ice cream, confectionery and bakery.", "Indústria": "Industry", "própria": "in-house", "Fábrica de salgados e pães de queijo ultracongelados instalada em Macapá.": "Factory of frozen savory snacks and cheese breads based in Macapá.", "municípios": "municipalities", "Distribuição em todo o Amapá": "Distribution across Amapá", "Frota própria e equipe comercial interna e externa cobrindo o estado.": "Own fleet and inside and field sales teams covering the state.", "Área de Livre Comércio": "Free Trade Zone", "Incentivos fiscais de Macapá e Santana aplicados à operação de compra e revenda.": "Tax incentives from Macapá and Santana applied to purchasing and resale.", "+ colaboradores": "+ employees", "Time UOMA": "Team UOMA", "Equipe própria em comercial, logística, indústria e administrativo.": "In-house team in sales, logistics, industry and administration.", "Viemos ouvir propostas. Se a sua empresa se encaixa em algum dos pontos abaixo, fale com a nossa diretoria ainda durante a feira.": "We came to hear proposals. If your company fits any of the points below, talk to our management during the fair.", "Novas marcas": "New brands", "Marcas que buscam entrada estruturada no mercado do Norte, com estoque e cobertura local.": "Brands looking for a structured entry into the northern market, with local stock and coverage.", "Ingredientes": "Ingredients", "Bases, coberturas, chocolates, gorduras, misturas e matérias-primas para indústria e revenda.": "Bases, toppings, chocolates, fats, mixes and raw materials for industry and resale.", "Equipamentos": "Equipment", "Linha para sorveteria, panificação e food service, com assistência e reposição garantidas.": "Equipment for ice cream, bakery and food service, with guaranteed support and spare parts.", "Embalagens": "Packaging", "Potes, filmes, laminados e embalagens para congelados, com personalização e escala.": "Tubs, films, laminates and packaging for frozen goods, with customization and scale.", "Tecnologia": "Technology", "Automação de depósito, rastreabilidade, força de vendas e integrações com ERP.": "Warehouse automation, traceability, sales force and ERP integrations.", "Representações exclusivas": "Exclusive representations", "Exclusividade para o Amapá com meta, plano comercial e execução acompanhada de perto.": "Exclusivity for Amapá with targets, a commercial plan and closely tracked execution.", "Duas operações, uma estrutura.": "Two operations, one structure.", "Distribuição": "Distribution", "Distribuidora especializada em insumos para sorveteria, confeitaria e panificação, com atendimento no varejo e no atacado.": "Distributor specialized in ingredients for ice cream, confectionery and bakery, serving both retail and wholesale.", "Varejo": "Retail", "Atacado": "Wholesale", "Assistência": "Support", "Indústria de ultracongelados para food service — salgados e pães de queijo produzidos em Macapá, prontos para forno.": "Frozen-food industry for food service — savory snacks and cheese breads made in Macapá, ready to bake.", "Ultracongelados": "Frozen goods", "Marca própria": "Own brand", "Fale com a gente agora.": "Talk to us now.", "O time de compras responde durante a feira. Para tratar direto com a diretoria, o contato está no fim da página.": "The purchasing team answers during the fair. To deal directly with management, the contact is at the bottom of the page.", "WhatsApp — Compras": "WhatsApp — Purchasing", "Compras": "Purchasing", "Site — Loja do Sorveteiro": "Website — Loja do Sorveteiro", "Site — Padoquinha": "Website — Padoquinha", "Instagram — Loja": "Instagram — Store", "Prefere que a gente procure você?": "Prefer us to reach out to you?", "Deixe seu contato e retornamos ainda durante a feira.": "Leave your contact and we'll get back to you during the fair.", "Nome": "Name", "Empresa": "Company", "Telefone ou WhatsApp": "Phone or WhatsApp", "Assunto": "Subject", "Selecione": "Select", "Quero fornecer para o Grupo UOMA": "I want to supply Grupo UOMA", "Quero comprar dos produtos de vocês": "I want to buy your products", "Represento uma marca": "I represent a brand", "Parceria": "Partnership", "Outro": "Other", "Mensagem": "Message", "Enviar contato": "Send", "Informe pelo menos um e-mail ou telefone.": "Enter at least an email or phone.", "Tem uma proposta comercial?": "Have a business proposal?", "Envie catálogo, tabela de preços e condições para o nosso time de compras. Lemos tudo o que chega durante a feira.": "Send your catalog, price list and terms to our purchasing team. We read everything that comes in during the fair.", "Enviar proposta comercial": "Send proposal", "Conte o que você oferece": "Tell us what you offer", "Leva menos de um minuto. Chega direto para o time de compras, com cópia para a diretoria.": "Takes less than a minute. It goes straight to the purchasing team, copying management.", "Seu nome": "Your name", "O que você oferece": "What you offer", "Representação exclusiva": "Exclusive representation", "Site ou catálogo": "Website or catalog", "Produtos ou linha": "Products or line", "Condições comerciais": "Commercial terms", "Tenho interesse em representação exclusiva para o Amapá": "I'm interested in exclusive representation for Amapá", "Enviar proposta": "Send proposal", "Usamos seus dados apenas para avaliar a proposta e responder.": "We use your data only to review the proposal and reply.", "Aponte a câmera para abrir esta página": "Point your camera to open this page", "Baixar QR Code": "Download QR Code", "Cartão digital": "Digital card", "Leve o Grupo UOMA no bolso.": "Take Grupo UOMA in your pocket.", "Salve nosso contato no celular ou compartilhe esta página com quem decide. Sem aplicativo, sem cadastro.": "Save our contact on your phone or share this page with decision-makers. No app, no sign-up.", "Salvar contato (.vcf)": "Save contact (.vcf)", "Compartilhar página": "Share page", "Diretoria": "Management", "Sócio-diretor • Grupo UOMA": "Managing partner • Grupo UOMA", "WhatsApp direto": "Direct WhatsApp", "E-mail da diretoria": "Management email", "Food Solutions — distribuição, indústria e food service. Macapá • Amapá • Brasil.": "Food Solutions — distribution, industry and food service. Macapá • Amapá • Brazil.", "Instagram da Loja": "Store's Instagram", "Instagram da Padoquinha": "Padoquinha's Instagram", "Contato": "Contact", "Grupo UOMA. Todos os direitos reservados.": "Grupo UOMA. All rights reserved.", "Meu contato": "My contact", "Sócio-diretor • Loja do Sorveteiro e Padoquinha": "Managing partner • Loja do Sorveteiro and Padoquinha", "Salvar meu contato": "Save my contact", "Peça para a pessoa apontar a câmera do celular para o código.": "Ask the person to point their phone camera at the code.", "Interesse em": "Interested in", "Grupo UOMA (as duas empresas)": "Grupo UOMA (both companies)", "Loja do Sorveteiro (distribuição)": "Loja do Sorveteiro (distribution)", "Padoquinha (indústria)": "Padoquinha (industry)", "Enviando…": "Sending…", "Abrindo seu aplicativo de e-mail…": "Opening your email app…", "Recebemos. Obrigado — vamos responder em breve.": "Got it. Thank you — we'll reply soon.", "Muitos envios seguidos. Aguarde um minuto.": "Too many submissions in a row. Wait a minute.", "Não conseguimos enviar agora. Fale com a gente pelo WhatsApp.": "We couldn't send right now. Reach us on WhatsApp.", "Informe a empresa e o seu nome.": "Enter the company and your name.", "Confira o e-mail digitado.": "Check the email you entered.", "Escolha o que você oferece.": "Choose what you offer.", "Informe o seu nome.": "Enter your name.", "Informe um e-mail ou um telefone.": "Enter an email or a phone.", "Informe um telefone ou WhatsApp.": "Enter a phone or WhatsApp.", "Parcerias": "Partnerships", "Feira Internacional • Oiapoque": "International Fair • Oiapoque", "Estamos na feira buscando parcerias.": "We're at the fair looking for partnerships.", "Cadastro rápido": "Quick sign-up", "Empresa, telefone e a empresa do grupo de interesse.": "Company, phone and the group company of interest.", "Nome da empresa": "Company name", "Salvar cadastro": "Save", "Fica salvo direto na sua lista.": "Saved straight to your list.", "Informe o nome da empresa.": "Enter the company name."}}, "PH": {"fr": {"Preço, prazo, pedido mínimo, frete até Macapá.": "Prix, délai, commande minimum, livraison jusqu'à Macapá."}, "es": {"Preço, prazo, pedido mínimo, frete até Macapá.": "Precio, plazo, pedido mínimo, flete hasta Macapá."}, "en": {"Preço, prazo, pedido mínimo, frete até Macapá.": "Price, lead time, minimum order, freight to Macapá."}}, "OG": {"fr": {}, "es": {}, "en": {}}, "TITLE": {"pt": "Grupo UOMA — Food Solutions", "fr": "Grupo UOMA — Food Solutions", "es": "Grupo UOMA — Food Solutions", "en": "Grupo UOMA — Food Solutions"}};
+  var DICT=I18N.DICT, PH=I18N.PH, OG=I18N.OG, TITLE=I18N.TITLE;
+  function norm(s){ return s.replace(/\s+/g,' ').trim(); }
+  var KEYS={}; Object.keys(DICT.fr).forEach(function(k){ KEYS[k]=1; });
+  var records=[];
+  function collect(root){
+    var w=document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode:function(n){
+      var p=n.parentNode; if(!p) return NodeFilter.FILTER_REJECT;
+      var tg=p.nodeName; if(tg==='SCRIPT'||tg==='STYLE'||tg==='NOSCRIPT') return NodeFilter.FILTER_REJECT;
+      if(p.closest && p.closest('#painel-adm,#adm-print-area')) return NodeFilter.FILTER_REJECT;
+      var v=n.nodeValue; if(!v||!v.trim()) return NodeFilter.FILTER_REJECT;
+      return KEYS[norm(v)] ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }}, false);
+    var n, novos=[]; while(n=w.nextNode()){ var v=n.nodeValue, m=v.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      var r={node:n,lead:m[1],core:norm(v),trail:m[3]}; records.push(r); novos.push(r); } return novos;
+  }
+  function aplicar(rs,lang){ rs.forEach(function(r){ var tr=(lang==='pt')?r.core:(DICT[lang][r.core]||r.core); var val=r.lead+tr+r.trail; if(r.node.nodeValue!==val) r.node.nodeValue=val; }); }
+  function atributos(lang){
+    document.querySelectorAll('[placeholder]').forEach(function(el){
+      var pt=el.getAttribute('data-ph-pt'); if(pt===null){ pt=el.getAttribute('placeholder')||''; el.setAttribute('data-ph-pt',pt); }
+      el.setAttribute('placeholder', lang==='pt'?pt:((PH[lang]&&PH[lang][pt])||pt));
+    });
+    document.querySelectorAll('optgroup[data-og]').forEach(function(el){
+      var pt=el.getAttribute('data-og'); el.setAttribute('label', lang==='pt'?pt:((OG[lang]&&OG[lang][pt])||pt));
+    });
+  }
+  var cur='pt';
+  function set(lang){
+    cur=lang;
+    aplicar(records,lang); atributos(lang);
+    document.documentElement.setAttribute('lang', lang==='pt'?'pt-BR':lang);
+    if(TITLE[lang]) document.title=TITLE[lang];
+    var bts=document.querySelectorAll('.lang button');
+    for(var i=0;i<bts.length;i++) bts[i].setAttribute('aria-pressed', bts[i].getAttribute('data-lang')===lang?'true':'false');
+    try{ localStorage.setItem('uoma_lang',lang); }catch(e){}
+  }
+  window.__uomaI18n = { applyEl:function(el){ aplicar(collect(el),cur); }, set:set, cur:function(){return cur;} };
+  function init(){
+    collect(document.body);
+    var saved=null; try{ saved=localStorage.getItem('uoma_lang'); }catch(e){}
+    var lang=saved;
+    if(!lang){ var nv=(navigator.language||'pt').toLowerCase(); lang = nv.indexOf('fr')===0?'fr' : nv.indexOf('es')===0?'es' : nv.indexOf('en')===0?'en' : 'pt'; }
+    var bts=document.querySelectorAll('.lang button');
+    for(var i=0;i<bts.length;i++){ (function(b){ b.addEventListener('click',function(){ set(b.getAttribute('data-lang')); }); })(bts[i]); }
+    set(lang);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+
+/* ============================================================
+   10. PAINEL ADM — cadastro privado de possíveis clientes
+   ------------------------------------------------------------
+   Abre em /#admin. Dados salvos APENAS neste aparelho
+   (localStorage). Ninguém que acesse o site vê esta lista.
+   ============================================================ */
+(function(){
+  var KEY='uoma_leads', PINKEY='uoma_pin';
+  var painel=document.getElementById('painel-adm');
+  if(!painel) return;
+  var trava   =document.getElementById('adm-trava'),
+      conteudo=document.getElementById('adm-conteudo'),
+      pinInput=document.getElementById('adm-pin'),
+      pinErro =document.getElementById('adm-pin-erro'),
+      dica    =document.getElementById('adm-trava-dica');
+
+  function ler(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+  function salvar(a){ try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} }
+  function cifra(s){ var h=0,i; for(i=0;i<s.length;i++){ h=((h<<5)-h+s.charCodeAt(i))|0; } return String(h); }
+  function temPin(){ return !!localStorage.getItem(PINKEY); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function z(n){ return (n<10?'0':'')+n; }
+  function fmt(ts){ var d=new Date(ts); return z(d.getDate())+'/'+z(d.getMonth()+1)+'/'+d.getFullYear()+' '+z(d.getHours())+':'+z(d.getMinutes()); }
+
+  function abrir(){
+    painel.hidden=false; painel.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    trava.hidden=false; conteudo.hidden=true; pinErro.textContent=''; pinInput.value='';
+    dica.textContent = temPin() ? 'Digite seu PIN de acesso.'
+                                : 'Crie um PIN (só números) ou deixe em branco e toque em Entrar.';
+    setTimeout(function(){ pinInput.focus(); }, 60);
+  }
+  function entrar(){ trava.hidden=true; conteudo.hidden=false; render(); }
+  function fechar(){
+    painel.hidden=true; painel.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+    if(location.hash==='#admin'){ history.replaceState(null,'',location.pathname+location.search); }
+  }
+
+  document.getElementById('adm-entrar').addEventListener('click', function(){
+    var v=pinInput.value.trim();
+    if(temPin()){
+      if(cifra(v)===localStorage.getItem(PINKEY)){ entrar(); }
+      else { pinErro.textContent='PIN incorreto.'; }
+    } else {
+      if(v){ localStorage.setItem(PINKEY, cifra(v)); }
+      entrar();
+    }
+  });
+  pinInput.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); document.getElementById('adm-entrar').click(); } });
+  document.getElementById('adm-fechar-trava').addEventListener('click', fechar);
+  document.getElementById('adm-fechar').addEventListener('click', fechar);
+  document.getElementById('adm-reset-pin').addEventListener('click', function(){
+    if(confirm('Remover o PIN? Seus cadastros continuam salvos.')){
+      localStorage.removeItem(PINKEY); dica.textContent='PIN removido. Toque em Entrar.'; pinErro.textContent='';
+    }
+  });
+
+  var form=document.getElementById('adm-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var emp=document.getElementById('adm-empresa').value.trim();
+    if(!emp){ document.getElementById('adm-empresa').focus(); return; }
+    var item={ id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+      empresa:emp,
+      telefone:document.getElementById('adm-tel').value.trim(),
+      interesse:document.getElementById('adm-int').value,
+      obs:document.getElementById('adm-obs').value.trim(),
+      ts:Date.now() };
+    var a=ler(); a.unshift(item); salvar(a);
+    form.reset(); document.getElementById('adm-empresa').focus(); render();
+  });
+
+  var busca=document.getElementById('adm-busca');
+  busca.addEventListener('input', render);
+
+  function render(){
+    var a=ler(), q=(busca.value||'').toLowerCase();
+    document.getElementById('adm-total').textContent=a.length;
+    var vis=a.filter(function(x){ return !q || (x.empresa||'').toLowerCase().indexOf(q)>-1; });
+    var lista=document.getElementById('adm-lista');
+    if(!vis.length){ lista.innerHTML='<p class="adm__vazio">'+(a.length?'Nada encontrado.':'Nenhum cadastro ainda. Adicione o primeiro acima.')+'</p>'; return; }
+    lista.innerHTML=vis.map(function(x){
+      var meta=[];
+      if(x.telefone){ meta.push('<a href="https://wa.me/'+x.telefone.replace(/\D/g,'')+'" target="_blank" rel="noopener">'+esc(x.telefone)+'</a>'); }
+      if(x.interesse){ meta.push('<span class="adm__tag">'+esc(x.interesse)+'</span>'); }
+      return '<div class="adm__item">'+
+        '<div class="adm__item-topo"><strong>'+esc(x.empresa)+'</strong>'+
+        '<button class="adm__del" data-id="'+x.id+'" aria-label="Excluir">&times;</button></div>'+
+        (meta.length?'<div class="adm__item-meta">'+meta.join('')+'</div>':'')+
+        (x.obs?'<div class="adm__item-obs">'+esc(x.obs)+'</div>':'')+
+        '<div class="adm__item-data">'+fmt(x.ts)+'</div>'+
+      '</div>';
+    }).join('');
+    Array.prototype.forEach.call(lista.querySelectorAll('.adm__del'), function(b){
+      b.addEventListener('click', function(){
+        if(confirm('Excluir este cadastro?')){ var id=b.getAttribute('data-id'); salvar(ler().filter(function(x){ return x.id!==id; })); render(); }
+      });
+    });
+  }
+
+  function baixar(blob, nome){
+    var u=URL.createObjectURL(blob), link=document.createElement('a');
+    link.href=u; link.download=nome; document.body.appendChild(link); link.click();
+    setTimeout(function(){ document.body.removeChild(link); URL.revokeObjectURL(u); }, 120);
+  }
+  document.getElementById('adm-csv').addEventListener('click', function(){
+    var a=ler(); if(!a.length){ alert('Nada para exportar ainda.'); return; }
+    var head=['Empresa','Telefone','Interesse','Observações','Data'];
+    var linhas=a.map(function(x){
+      return [x.empresa,x.telefone,x.interesse,x.obs,fmt(x.ts)].map(function(v){
+        v=(v==null?'':String(v)); return '"'+v.replace(/"/g,'""')+'"';
+      }).join(';');
+    });
+    var csv='\uFEFF'+head.join(';')+'\r\n'+linhas.join('\r\n');
+    var d=new Date(), nome='cadastros-uoma-'+d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate())+'.csv';
+    baixar(new Blob([csv],{type:'text/csv;charset=utf-8'}), nome);
+  });
+
+  document.getElementById('adm-print').addEventListener('click', function(){
+    var a=ler(); if(!a.length){ alert('Nada para o relatório ainda.'); return; }
+    var linhas=a.map(function(x,i){
+      return '<tr><td>'+(i+1)+'</td><td>'+esc(x.empresa)+'</td><td>'+esc(x.telefone||'')+'</td><td>'+esc(x.interesse||'')+'</td><td>'+esc(x.obs||'')+'</td><td>'+fmt(x.ts)+'</td></tr>';
+    }).join('');
+    document.getElementById('adm-print-area').innerHTML=
+      '<h1>Grupo UOMA — Possíveis clientes</h1>'+
+      '<p>Relatório gerado em '+fmt(Date.now())+' &bull; '+a.length+' cadastros</p>'+
+      '<table><thead><tr><th>#</th><th>Empresa</th><th>Telefone</th><th>Interesse</th><th>Observações</th><th>Data</th></tr></thead><tbody>'+linhas+'</tbody></table>';
+    document.body.classList.add('imprimindo');
+    window.print();
+    setTimeout(function(){ document.body.classList.remove('imprimindo'); document.getElementById('adm-print-area').innerHTML=''; }, 400);
+  });
+
+  function checar(){ if(location.hash==='#admin'){ abrir(); } }
+  window.addEventListener('hashchange', checar);
+  checar();
 })();
 
 /* ============================================================
