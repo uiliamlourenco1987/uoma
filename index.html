@@ -15,7 +15,7 @@
 <meta name="keywords" content="Grupo UOMA, Loja do Sorveteiro, Padoquinha, feira internacional Oiapoque, distribuidora Amapá, insumos sorveteria, confeitaria, panificação, ultracongelados, food service, Macapá, SUFRAMA, Área de Livre Comércio">
 <meta name="author" content="Grupo UOMA">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://grupouoma.pages.dev/">
+<link rel="canonical" href="https://grupouoma.com.br/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -23,8 +23,8 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Grupo UOMA — Food Solutions">
 <meta property="og:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. Encontre-nos na feira internacional de Oiapoque.">
-<meta property="og:url" content="https://grupouoma.pages.dev/">
-<meta property="og:image" content="https://grupouoma.pages.dev/og.png">
+<meta property="og:url" content="https://grupouoma.com.br/">
+<meta property="og:image" content="https://grupouoma.com.br/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Grupo UOMA — Food Solutions">
 <meta name="twitter:description" content="Distribuição, indústria e food service em Macapá, Amapá. Loja do Sorveteiro + Padoquinha. Feira internacional de Oiapoque.">
-<meta name="twitter:image" content="https://grupouoma.pages.dev/og.png">
+<meta name="twitter:image" content="https://grupouoma.com.br/og.png">
 
 <!-- Cor da barra do navegador -->
 <meta name="theme-color" content="#0F2344">
@@ -59,7 +59,7 @@
   "name": "Grupo UOMA",
   "alternateName": "UOMA Food Solutions",
   "description": "Distribuição, indústria e food service no Amapá. Loja do Sorveteiro e Padoquinha.",
-  "url": "https://grupouoma.pages.dev/",
+  "url": "https://grupouoma.com.br/",
   "telephone": "+55-96-98101-0427",
   "email": "compras@csorveteiro.com.br",
   "contactPoint": [
@@ -217,6 +217,8 @@ a:focus-visible,button:focus-visible{
    ============================================================ */
 .nav{
   position:fixed;inset:0 0 auto 0;z-index:100;
+  padding-top:env(safe-area-inset-top);
+  padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);
   transition:background var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
              backdrop-filter var(--dur) var(--ease), border-color var(--dur) var(--ease);
   border-bottom:1px solid transparent;
@@ -253,7 +255,7 @@ a:focus-visible,button:focus-visible{
   position:relative;
   min-height:100svh;
   display:flex;align-items:center;
-  padding:120px 0 96px;
+  padding:calc(120px + env(safe-area-inset-top)) 0 96px;
   overflow:hidden;
   background-color:var(--branco);
   background-image:
@@ -553,7 +555,7 @@ a:focus-visible,button:focus-visible{
    10c. ACESSO RÁPIDO — botão flutuante + cartão em tela cheia
    ============================================================ */
 .atalho{
-  position:fixed;right:20px;bottom:20px;z-index:95;
+  position:fixed;right:calc(20px + env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));z-index:95;
   display:inline-flex;align-items:center;gap:10px;
   padding:14px 20px;border-radius:100px;
   background-color:var(--marinho);color:#fff;
@@ -1364,7 +1366,7 @@ a:focus-visible,button:focus-visible{
    ============================================================ */
 'use strict';
 
-var SITE_URL = 'https://grupouoma.pages.dev/';
+var SITE_URL = 'https://grupouoma.com.br/';
 
 /* ------------------------------------------------------------
    SUPABASE — preencha depois de criar o projeto.
